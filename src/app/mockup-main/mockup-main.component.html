@@ -1,0 +1,43 @@
+<div class="">
+  <label for="url">Url: 
+    <input type="text" id="url" [(ngModel)]="url.name" placeholder="name" >
+  </label>
+</div>
+
+<div class="">
+  <label for="name">Nombre: 
+    <input type="text" id="name" placeholder="name">
+  </label>
+</div>
+
+<div class="">
+	<p>Tipo</p>
+	<select [(ngModel)] = "selectedType"  (click) = "selectType()">
+		<option value="" disabled>seleccion el tipo</option>
+		<option value="xml">Web-Service</option>
+		<option value="json">Rest</option>
+	</select>
+	{{selectedType}}
+	<div *ngIf="selectedType == 'xml'">
+		<div>Descripción : <input type="text" name="" placeholder="Escribe la Descripción">
+		</div>
+		<table>
+			<tr>
+				<th>Key</th>
+				<th>Value</th>
+			</tr>
+			<tr>
+				<th><input type="text" name=""></th>
+				<th><input type="text" name=""></th>
+				<th (click)= "addRow()"><button> +</button></th>
+				
+			</tr>
+		</table>
+	</div>
+</div>
+<button (click) = "onTestGet()">Test Get Request</button> <br>
+<p>output: {{getData}}</p>
+<hr>
+
+<button (click) = "onTestPost()">Test Get Request</button> <br>
+<p>output: {{postData}}</p>

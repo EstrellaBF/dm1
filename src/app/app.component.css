@@ -1,0 +1,14 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.nav-wrapper {
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	margin: 1em 10em; 
+}
+
+.text-center {
+	text-align: center;
+}
+
